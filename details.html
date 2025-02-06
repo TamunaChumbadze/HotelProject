@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Eater&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="./index.html"><img id="default-logo" src="./pngtree-star-logo-template-vector-icon-illustration-design-png-image_5425202.png"/></a>
+        <span><a href="./index.html">STARSHOTEL</a></span>
+      </div>
+      <ul class="nav-links">
+        <li><a  data-target="index.html">Home</a></li>
+        <li><a  data-target="rooms.html">Rooms</a></li>
+        <li><a  data-target="hotels.html">Hotels</a></li>
+        <li><a class="active" data-target="bookedRooms.html">Booked Rooms</a></li>
+    </ul>
+        <div class="hamburger">
+          <i class="fa-solid fa-burger"></i>
+        </div>
+    </nav>
+    
+    <div class="detailsContainer my-5">
+      <div class="row">
+        <div class="col-md-8">
+          <section id="room-details"></section>
+        </div>
+
+        <div class="col-md-4">
+          <div class="details-card">
+            <div class="details-body">
+              <h5 class="details-card-title text-center ">Reservation</h5>
+              
+              <form id="reservation-form">
+                <div class="mb-3">
+                  <label for="check-in" class="form-label">Check-in</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="check-in"
+                    name="CheckInDate"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="check-out" class="form-label">Check-out</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="check-out"
+                    name="CheckOutDate"
+                    required
+                  />
+                </div>
+          
+                </div>
+                <div class="mb-3">
+                  <label for="customer-name" class="form-label"
+                    >Customer Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="customer-name"
+                    name="CustomerName"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="customer-phone" class="form-label"
+                    >Customer Phone</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="customer-phone"
+                    name="CustomerPhone"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  Book Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="detailsContainer my-5">
+      <div class="row">
+        
+        <div class="col-md-8">
+          <h2 class="section-title">Room Details</h2>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bed Type</td>
+                <td>Double Bed</td>
+              </tr>
+              <tr>
+                <td>Internet</td>
+                <td>Free Internet</td>
+              </tr>
+              <tr>
+                <td>Newspaper</td>
+                <td>Free Newspaper</td>
+              </tr>
+              <tr>
+                <td>Size</td>
+                <td>60 square meters</td>
+              </tr>
+              <tr>
+                <td>View</td>
+                <td>Beach view</td>
+              </tr>
+              <tr>
+                <td>Occupancy</td>
+                <td>2 persons</td>
+              </tr>
+              <tr>
+                <td>Breakfast</td>
+                <td>Breakfast included</td>
+              </tr>
+              <tr>
+                <td>Private Balcony</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>TV</td>
+                <td>Flat Screen TV</td>
+              </tr>
+              <tr>
+                <td>Jacuzzi</td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      
+        <div class="col-md-4">
+          <h2 class="section-title"> Overview </h2>
+          <div class="overview-section">
+           
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-info w-100" onclick="showContent('overview')">Overview</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-info w-100" onclick="showContent('facilities')">Facilities</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-info w-100" onclick="showContent('extra')">Extra</button>
+              </div>
+            </div>
+
+            <div id="overview" class="overview-content my-3">
+              <img src="https://hotelbooking.stepprojects.ge/images/tab/restaurant-01.jpg" alt="Room Overview" class="img-fluid mb-3" />
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. In hendrerit risus arcu, in eleifend metus dapibus varius. Nulla dolor sapien, laoreet vel tincidunt non, egestas non justo. Phasellus et mattis lectus, et gravida urna.</p>
+            </div>
+            <div id="facilities" class="overview-content my-3" style="display:none;">
+              <p>Phasellus sodales justo felis, a vestibulum risus mattis vitae. Aliquam vitae varius elit, non facilisis massa. Vestibulum luctus diam mollis gravida bibendum.</p>
+            </div>
+            <div id="extra" class="overview-content my-3" style="display:none;">
+              <p>Aenean pretium libero eu ipsum lacinia, sit amet tempus nulla luctus. Aliquam vitae varius elit, non facilisis massa. Pellentesque in massa eu augue placerat cursus sed quis magna.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="section-title">Other rooms</h1>
+
+   
+    <div class="otherRooms d-flex flex-wrap gap-3 justify-content-center" ></div>
+
+    <div class="footer-bottom">
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-6"> © 2025 IT Academy Step & Tamar Tchumbadze; All Rights Reserved </div>
+          </div>
+      </div>
+    </div>
+
+    <button id="back-to-top" class="btn btn-primary">↑</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./details.js"></script>
+  </body>
+</html>
